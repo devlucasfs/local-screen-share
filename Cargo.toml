@@ -1,0 +1,18 @@
+[package]
+name = "screen_share"
+version = "0.2.0"
+edition = "2021"
+
+[[bin]]
+name = "screen_share"
+path = "src/main.rs"
+
+[dependencies]
+scrap = "0.5"
+ashpd = "0.10"
+pipewire = "0.9"
+tokio = { version = "1", features = ["rt", "net", "time"] }
+
+[profile.release]
+opt-level = 3
+lto = true
